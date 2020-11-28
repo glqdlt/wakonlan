@@ -1,4 +1,4 @@
-package com.glqdlt.myho.wakeonlan;
+package com.glqdlt.myho.intergration;
 
 import java.net.InetSocketAddress;
 import java.net.StandardProtocolFamily;

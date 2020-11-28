@@ -1,4 +1,4 @@
-package com.glqdlt.myho.wakeonlan;
+package com.glqdlt.myho.intergration;
 
 public class AppMain {
     public static void main(String[] args) {

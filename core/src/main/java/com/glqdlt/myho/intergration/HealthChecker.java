@@ -1,4 +1,4 @@
-package com.glqdlt.myho.wakeonlan;
+package com.glqdlt.myho.intergration;
 
 import java.io.IOException;
 import java.net.InetAddress;
