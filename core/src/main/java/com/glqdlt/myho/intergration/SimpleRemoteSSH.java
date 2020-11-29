@@ -25,7 +25,7 @@ public class SimpleRemoteSSH implements RemoteSSH {
     }
 
     public static void main(String[] args) throws Exception {
-        SimpleRemoteSSH aa = new SimpleRemoteSSH("uu", "pp", "192.168.0.ip");
+        SimpleRemoteSSH aa = new SimpleRemoteSSH(args[0], args[1], args[2]);
         aa.oneTimeExecCommand(SSHCommands.SHUTDOWN);
     }
 
