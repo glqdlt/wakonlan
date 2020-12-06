@@ -9,17 +9,6 @@ import java.util.function.Consumer;
 
 public class HealthChecker {
 
-
-    public static void main(String[] args) throws InterruptedException {
-        HealthChecker healthChecker = new HealthChecker();
-
-        while (true) {
-            healthChecker.check("192.168.0.ip", System.out::println);
-
-            Thread.sleep(TimeUnit.SECONDS.toMillis(10));
-        }
-    }
-
     private static final ExecutorService POOL = Executors.newFixedThreadPool(1);
 
     public void check(String targetIp, Consumer<Boolean> callback) {

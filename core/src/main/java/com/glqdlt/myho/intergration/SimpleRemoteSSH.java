@@ -24,12 +24,7 @@ public class SimpleRemoteSSH implements RemoteSSH {
         this.port = port;
     }
 
-    public static void main(String[] args) throws Exception {
-        SimpleRemoteSSH aa = new SimpleRemoteSSH(args[0], args[1], args[2]);
-        aa.oneTimeExecCommand(SSHCommands.SHUTDOWN);
-    }
-
-    public void oneTimeExecCommand(SSHCommand command) throws Exception {
+    public void oneTimeExecCommand(SSHCommand command) {
 
         ChannelExec channel = null;
         Session session = null;
@@ -48,6 +43,8 @@ public class SimpleRemoteSSH implements RemoteSSH {
 
             String responseString = new String(responseStream.toByteArray());
             System.out.println(responseString);
+        } catch (InterruptedException | JSchException e) {
+            throw new RuntimeException(e);
         } finally {
             if (session != null) {
                 session.disconnect();
