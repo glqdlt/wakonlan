@@ -2,7 +2,7 @@ package com.glqdlt.myho.intergration;
 
 public enum SSHCommands implements SSHCommand {
 
-    SHUTDOWN("sudo shutdown -P 00");
+    SHUTDOWN("shutdown /P");
 
     SSHCommands(String command) {
         this.command = command;
